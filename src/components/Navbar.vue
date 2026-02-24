@@ -1,0 +1,197 @@
+<script setup>
+import { ref, onMounted, onUnmounted, watch } from "vue";
+import { Rocket, X, Menu } from "lucide-vue-next";
+import { useRouter, useRoute } from "vue-router";
+
+const isScrolled = ref(false);
+const isMenuOpen = ref(false);
+const router = useRouter();
+const route = useRoute();
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 20;
+};
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+  if (isMenuOpen.value) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+};
+
+const closeMenu = () => {
+  isMenuOpen.value = false;
+  document.body.style.overflow = "";
+};
+
+// Close menu on route change
+watch(
+  () => route.path,
+  () => {
+    closeMenu();
+  },
+);
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+
+const navLinks = [
+  { name: "Beranda", to: "/" },
+  { name: "Galeri", to: "/gallery" },
+  { name: "Blog", to: "/blog" },
+  { name: "Kru", to: "/crew" },
+  { name: "Pencapaian", to: "/milestones" },
+];
+</script>
+
+<template>
+  <!-- Main Nav Bar -->
+  <nav
+    :class="[
+      'fixed top-0 left-0 right-0 z-[60] transition-all duration-300 px-6 py-2',
+      isScrolled && !isMenuOpen
+        ? 'glass-dark py-1.5 translate-y-1.5 mx-8 rounded-full shadow-2xl'
+        : isMenuOpen
+          ? 'bg-void-black/80 backdrop-blur-md'
+          : 'bg-transparent',
+    ]"
+  >
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <router-link
+        to="/"
+        class="flex items-center gap-3 group cursor-pointer relative z-70"
+        @click="closeMenu"
+      >
+        <img
+          src="/logo.png"
+          alt="semizone"
+          class="h-10 md:h-12 w-auto object-contain transition-all group-hover:scale-110 drop-shadow-blue"
+        />
+        <span
+          class="text-xl font-poppins font-bold bg-clip-text text-transparent bg-linear-to-r from-neon-blue to-white"
+        >
+          SEMIZONE
+        </span>
+      </router-link>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-6">
+        <router-link
+          v-for="link in navLinks"
+          :key="link.name"
+          :to="link.to"
+          class="text-sm font-medium text-starlight/70 hover:text-neon-blue hover:glow-text transition-all"
+          active-class="text-neon-blue glow-text"
+        >
+          {{ link.name }}
+        </router-link>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button
+        @click="toggleMenu"
+        class="md:hidden text-starlight p-2 hover:bg-white/10 rounded-lg transition-colors relative z-70"
+      >
+        <Menu v-if="!isMenuOpen" class="w-6 h-6" />
+        <X v-else class="w-6 h-6" />
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay (Outside parent for better fixed positioning) -->
+  <Transition
+    enter-active-class="transition duration-400 ease-out"
+    enter-from-class="opacity-0 backdrop-blur-0"
+    enter-to-class="opacity-100 backdrop-blur-2xl"
+    leave-active-class="transition duration-300 ease-in"
+    leave-from-class="opacity-100 backdrop-blur-2xl"
+    leave-to-class="opacity-0 backdrop-blur-0"
+  >
+    <div
+      v-if="isMenuOpen"
+      class="fixed inset-0 z-50 md:hidden bg-void-black/95 flex flex-col items-center justify-center"
+    >
+      <!-- Background Accents for Mobile Menu -->
+      <div
+        class="absolute top-[20%] left-[10%] w-64 h-64 bg-neon-blue/10 blur-[100px] rounded-full pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-[20%] right-[10%] w-64 h-64 bg-glowing-purple/10 blur-[100px] rounded-full pointer-events-none"
+      ></div>
+
+      <div class="flex flex-col items-center gap-10 relative z-10 w-full px-8">
+        <router-link
+          v-for="(link, index) in navLinks"
+          :key="link.name"
+          :to="link.to"
+          @click="closeMenu"
+          class="text-4xl font-poppins font-bold text-starlight/40 hover:text-neon-blue transition-all relative group w-full text-center nav-link-mobile"
+          active-class="text-neon-blue scale-110 !text-starlight glow-text"
+          :style="{ animationDelay: `${index * 100 + 150}ms` }"
+        >
+          <span class="relative">
+            {{ link.name }}
+            <span
+              class="absolute -bottom-2 left-0 w-0 h-1 bg-neon-blue transition-all group-hover:w-full"
+            ></span>
+          </span>
+        </router-link>
+      </div>
+
+      <div
+        class="mt-20 flex flex-col items-center gap-6 relative z-10 animate-fade-in"
+        style="animation-delay: 800ms"
+      >
+        <div class="flex gap-6">
+          <img
+            src="/logo.png"
+            alt="semizone"
+            class="h-32 md:h-48 w-auto object-contain drop-shadow-[0_0_40px_rgba(0,243,255,0.5)]"
+          />
+        </div>
+        <p class="text-xs text-starlight/30 tracking-[0.3em] uppercase">
+          Sector SMK - XI RPL 1
+        </p>
+      </div>
+    </div>
+  </Transition>
+</template>
+
+<style scoped>
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nav-link-mobile {
+  opacity: 0;
+  animation: slide-up 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fade-in 1s ease forwards;
+}
+</style>

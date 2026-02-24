@@ -1,0 +1,92 @@
+<script setup>
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
+</script>
+
+<template>
+  <div
+    class="min-h-screen bg-void-black selection:bg-neon-blue selection:text-void-black"
+  >
+    <Navbar />
+
+    <main class="relative z-10">
+      <router-view v-slot="{ Component }">
+        <transition name="page" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+
+      <!-- CTA -->
+      <section class="py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="glass p-12 rounded-3xl relative overflow-hidden group">
+            <div
+              class="absolute top-0 right-0 w-64 h-64 bg-neon-blue/10 blur-3xl -translate-x-1/2 -translate-y-1/2"
+            ></div>
+            <h2 class="text-4xl font-bold text-white mb-6">
+              Join the Exploration
+            </h2>
+            <p class="text-starlight/60 mb-10 text-lg">
+              Every mission needs a crew. Are you ready to chart the unknown?
+            </p>
+            <button
+              class="bg-neon-blue text-void-black px-10 py-4 rounded-xl font-bold hover:shadow-[0_0_30px_rgba(0,243,255,0.5)] transition-all"
+            >
+              ENROLL NOW
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+
+    <!-- Ambient background effects -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div
+        class="absolute top-[-10%] left-[-10%] w-125 h-125 bg-neon-blue/5 blur-[120px] rounded-full animate-pulse"
+      ></div>
+      <div
+        class="absolute bottom-[-10%] right-[-10%] w-125 h-125 bg-glowing-purple/5 blur-[120px] rounded-full animate-pulse delay-700"
+      ></div>
+    </div>
+  </div>
+</template>
+
+<style>
+/* Global smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Page Transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s ease;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+/* Custom Scrollbar for Sci-Fi feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f3ff;
+}
+</style>
