@@ -4,6 +4,7 @@ import GalleryView from '../views/GalleryView.vue';
 import CrewView from '../views/CrewView.vue';
 import MilestonesView from '../views/MilestonesView.vue';
 import BlogView from '../views/BlogView.vue';
+import MusicView from '../views/MusicView.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/blog',
       name: 'blog',
       component: BlogView
+    },
+    {
+      path: '/music',
+      name: 'music',
+      component: MusicView
     }
   ],
   scrollBehavior(to, from, savedPosition) {

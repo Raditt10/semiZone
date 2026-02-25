@@ -28,19 +28,19 @@ import { Instagram, Globe, Mail, MapPin } from "lucide-vue-next";
         <div class="flex gap-4">
           <a
             href="#"
-            class="p-3 bg-white/5 rounded-xl border border-white/10 hover:border-neon-blue hover:text-neon-blue transition-all"
+            class="p-3 bg-white/5 rounded-xl border border-white/10 hover:border-neon-blue hover:text-neon-blue transition-all select-none outline-none caret-transparent"
           >
             <Instagram class="w-5 h-5" />
           </a>
           <a
             href="#"
-            class="p-3 bg-white/5 rounded-xl border border-white/10 hover:border-neon-blue hover:text-neon-blue transition-all"
+            class="p-3 bg-white/5 rounded-xl border border-white/10 hover:border-neon-blue hover:text-neon-blue transition-all select-none outline-none caret-transparent"
           >
             <Mail class="w-5 h-5" />
           </a>
           <a
             href="#"
-            class="p-3 bg-white/5 rounded-xl border border-white/10 hover:border-neon-blue hover:text-neon-blue transition-all"
+            class="p-3 bg-white/5 rounded-xl border border-white/10 hover:border-neon-blue hover:text-neon-blue transition-all select-none outline-none caret-transparent"
           >
             <Globe class="w-5 h-5" />
           </a>
@@ -52,36 +52,32 @@ import { Instagram, Globe, Mail, MapPin } from "lucide-vue-next";
           <h4
             class="text-white font-bold mb-6 tracking-widest uppercase text-sm"
           >
-            Tautan Cepat
+            Tautan
           </h4>
           <ul class="space-y-4">
             <li>
-              <a
-                href="#home"
-                class="text-starlight/50 hover:text-neon-blue transition-colors"
-                >Kontrol Navigasi</a
-              >
+              <router-link
+                to="/"
+                class="text-starlight/50 hover:text-neon-blue transition-colors select-none outline-none caret-transparent"
+              >Beranda</router-link>
             </li>
             <li>
-              <a
-                href="#gallery"
-                class="text-starlight/50 hover:text-neon-blue transition-colors"
-                >Arsip Visual</a
-              >
+              <router-link
+                to="/gallery"
+                class="text-starlight/50 hover:text-neon-blue transition-colors select-none outline-none caret-transparent"
+              >Galeri</router-link>
             </li>
             <li>
-              <a
-                href="#blog"
-                class="text-starlight/50 hover:text-neon-blue transition-colors"
-                >Catatan Misi</a
-              >
+              <router-link
+                to="/blog"
+                class="text-starlight/50 hover:text-neon-blue transition-colors select-none outline-none caret-transparent"
+              >Blog</router-link>
             </li>
             <li>
-              <a
-                href="#crew"
-                class="text-starlight/50 hover:text-neon-blue transition-colors"
-                >Daftar Anggota</a
-              >
+              <router-link
+                to="/crew"
+                class="text-starlight/50 hover:text-neon-blue transition-colors select-none outline-none caret-transparent"
+              >Daftar Murid</router-link>
             </li>
           </ul>
         </div>
@@ -94,11 +90,11 @@ import { Instagram, Globe, Mail, MapPin } from "lucide-vue-next";
           <ul class="space-y-4 text-starlight/50">
             <li class="flex items-center gap-3">
               <MapPin class="w-4 h-4 text-neon-blue" />
-              Sector SMK, Galaxy ID
+                 Jl. Soekarno-Hatta KM. 10, Kota Bandung, Jawa Barat
             </li>
             <li class="flex items-center gap-3">
               <Mail class="w-4 h-4 text-neon-blue" />
-              hq@semizone.site
+               xirpl1@gmail.com
             </li>
           </ul>
         </div>
@@ -108,10 +104,10 @@ import { Instagram, Globe, Mail, MapPin } from "lucide-vue-next";
     <div
       class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-starlight/30 text-xs tracking-widest"
     >
-      <p>&copy; 2024 PROYEK SEMIZONE. SEMUA SISTEM NORMAL.</p>
+      <p>&copy; 2026 SEMIZONE. All Rights Reserved.</p>
       <div class="flex gap-8">
-        <a href="#" class="hover:text-neon-blue transition-colors">PROTOKOL</a>
-        <a href="#" class="hover:text-neon-blue transition-colors">KEAMANAN</a>
+        <a href="#" class="hover:text-neon-blue transition-colors select-none outline-none caret-transparent">PRIVASI</a>
+        <a href="#" class="hover:text-neon-blue transition-colors select-none outline-none caret-transparent">KETENTUAN</a>
       </div>
     </div>
   </footer>

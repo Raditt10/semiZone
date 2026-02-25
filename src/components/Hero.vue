@@ -56,12 +56,12 @@ import { ChevronRight } from "lucide-vue-next";
                 class="w-5 h-5 group-hover:translate-x-1 transition-transform"
               />
             </a>
-            <a
-              href="#crew"
+            <router-link
+              to="/crew"
               class="px-8 py-4 glass text-starlight font-bold rounded-xl hover:bg-white/20 transition-all border-white/10"
             >
-              Temui Para Kru
-            </a>
+              Lihat Para Murid
+            </router-link>
           </div>
         </div>
       </div>

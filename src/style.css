@@ -16,7 +16,7 @@
 
 @layer base {
   body {
-    @apply bg-void-black text-starlight font-inter overflow-x-hidden;
+    @apply bg-void-black text-starlight font-inter overflow-x-hidden select-none caret-transparent;
     background-image:
       radial-gradient(
         circle at 20% 30%,
@@ -36,6 +36,15 @@
   h3,
   h4 {
     @apply font-poppins font-bold tracking-tight;
+  }
+
+  /* Global Caret & Outline Fix */
+  a,
+  button,
+  [role="button"],
+  .router-link-active,
+  .router-link-exact-active {
+    @apply outline-none caret-transparent;
   }
 }
 

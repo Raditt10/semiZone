@@ -7,8 +7,8 @@ import { testimonials } from "../data";
   <section id="testimonials" class="py-24 px-6 bg-deep-blue/10">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-5xl mb-4">Suara Siswa</h2>
-        <p class="text-starlight/60">Siaran dari seluruh rasi bintang.</p>
+        <h2 class="text-3xl md:text-5xl mb-4">Penilaian untuk Kami</h2>
+        <p class="text-starlight/60">Pengalaman mereka tentang kelas XI RPL 1.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
