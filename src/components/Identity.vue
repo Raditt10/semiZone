@@ -5,7 +5,7 @@ const identities = [
   {
     title: "Visi",
     description:
-      "Menjadi generasi inovator yang memimpin dalam eksplorasi global dan keunggulan ilmiah.",
+      "Menciptakan Aplikasi Masa Depan yang Menginspirasi dan Memotivasi.",
     icon: Telescope,
     color: "text-neon-blue",
     bg: "bg-neon-blue/10",
@@ -13,7 +13,7 @@ const identities = [
   {
     title: "Misi",
     description:
-      "Menumbuhkan rasa ingin tahu, menguasai teknologi canggih, dan membangun komunitas pemikiran kolaboratif bintang.",
+      "Belajar dengan semangat penjelajahan, berinovasi tanpa batas, dan membangun komunitas yang mendukung untuk mencapai kehebatan bersama.",
     icon: Rocket,
     color: "text-glowing-purple",
     bg: "bg-glowing-purple/10",
@@ -21,7 +21,7 @@ const identities = [
   {
     title: "Nilai",
     description:
-      "Integritas bagaikan bintang berlian, keberanian menghadapi kehampaan, dan persatuan sebagai rasi bintang yang kuat.",
+      "Keberanian untuk menjelajah, kreativitas tanpa batas, dan persahabatan yang mengikat kami dalam perjalanan menuju kehebatan.",
     icon: Star,
     color: "text-white",
     bg: "bg-white/10",

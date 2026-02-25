@@ -46,8 +46,9 @@ const navLinks = [
   { name: "Beranda", to: "/" },
   { name: "Galeri", to: "/gallery" },
   { name: "Blog", to: "/blog" },
-  { name: "Kru", to: "/crew" },
+  { name: "Murid", to: "/crew" },
   { name: "Pencapaian", to: "/milestones" },
+  { name: "Musik", to: "/music" },
 ];
 </script>
 
@@ -87,7 +88,7 @@ const navLinks = [
           v-for="link in navLinks"
           :key="link.name"
           :to="link.to"
-          class="text-sm font-medium text-starlight/70 hover:text-neon-blue hover:glow-text transition-all"
+          class="text-sm font-medium text-starlight/70 hover:text-neon-blue hover:glow-text transition-all select-none outline-none caret-transparent"
           active-class="text-neon-blue glow-text"
         >
           {{ link.name }}
@@ -116,7 +117,7 @@ const navLinks = [
   >
     <div
       v-if="isMenuOpen"
-      class="fixed inset-0 z-50 md:hidden bg-void-black/95 flex flex-col items-center justify-center"
+      class="fixed inset-0 z-50 md:hidden bg-void-black/95 flex flex-col items-center justify-center overflow-y-auto pt-20 pb-8"
     >
       <!-- Background Accents for Mobile Menu -->
       <div
@@ -126,13 +127,13 @@ const navLinks = [
         class="absolute bottom-[20%] right-[10%] w-64 h-64 bg-glowing-purple/10 blur-[100px] rounded-full pointer-events-none"
       ></div>
 
-      <div class="flex flex-col items-center gap-10 relative z-10 w-full px-8">
+      <div class="flex flex-col items-center gap-8 relative z-10 w-full px-8">
         <router-link
           v-for="(link, index) in navLinks"
           :key="link.name"
           :to="link.to"
           @click="closeMenu"
-          class="text-4xl font-poppins font-bold text-starlight/40 hover:text-neon-blue transition-all relative group w-full text-center nav-link-mobile"
+          class="text-3xl font-poppins font-bold text-starlight/40 hover:text-neon-blue transition-all relative group w-full text-center nav-link-mobile select-none outline-none caret-transparent"
           active-class="text-neon-blue scale-110 !text-starlight glow-text"
           :style="{ animationDelay: `${index * 100 + 150}ms` }"
         >
@@ -146,14 +147,14 @@ const navLinks = [
       </div>
 
       <div
-        class="mt-20 flex flex-col items-center gap-6 relative z-10 animate-fade-in"
+        class="mt-12 flex flex-col items-center gap-6 relative z-10 animate-fade-in shrink-0"
         style="animation-delay: 800ms"
       >
         <div class="flex gap-6">
           <img
             src="/logo.png"
             alt="semizone"
-            class="h-32 md:h-48 w-auto object-contain drop-shadow-[0_0_40px_rgba(0,243,255,0.5)]"
+            class="h-24 w-auto object-contain drop-shadow-[0_0_40px_rgba(0,243,255,0.5)]"
           />
         </div>
         <p class="text-xs text-starlight/30 tracking-[0.3em] uppercase">

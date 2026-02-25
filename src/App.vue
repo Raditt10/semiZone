@@ -1,6 +1,9 @@
 <script setup>
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 </script>
 
 <template>
@@ -24,15 +27,18 @@ import Footer from "./components/Footer.vue";
               class="absolute top-0 right-0 w-64 h-64 bg-neon-blue/10 blur-3xl -translate-x-1/2 -translate-y-1/2"
             ></div>
             <h2 class="text-4xl font-bold text-white mb-6">
-              Join the Exploration
+              Bergabunglah dengan Petualangan Kami!
             </h2>
             <p class="text-starlight/60 mb-10 text-lg">
-              Every mission needs a crew. Are you ready to chart the unknown?
+              Jadilah bagian dari perjalanan luar biasa di kelas XI RPL 1. Bersama
+              kita akan menjelajahi dunia pengetahuan, kreativitas, dan
+              persahabatan yang tak terbatas.
             </p>
             <button
               class="bg-neon-blue text-void-black px-10 py-4 rounded-xl font-bold hover:shadow-[0_0_30px_rgba(0,243,255,0.5)] transition-all"
+              @click="router.push('/gallery')"
             >
-              ENROLL NOW
+              Lihat Perjalanan Kami
             </button>
           </div>
         </div>

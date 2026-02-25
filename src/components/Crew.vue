@@ -2,7 +2,7 @@
 import { Mail, ShieldCheck } from "lucide-vue-next";
 import { students } from "../data";
 
-const leader = students.find((s) => s.type === "leader");
+const guru = students.find((s) => s.type === "leader");
 const members = students.filter((s) => s.type !== "leader");
 </script>
 
@@ -10,14 +10,14 @@ const members = students.filter((s) => s.type !== "leader");
   <section id="crew" class="py-24 px-6 bg-void-black relative">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-5xl mb-4">Temui Para Kru</h2>
+        <h2 class="text-3xl md:text-5xl mb-4">Kenali Para Murid XI RPL 1</h2>
         <p class="text-starlight/60">
-          Pemikiran cemerlang yang mengemudikan misi ini.
+          Para murid yang membawa semangat dan kehebatan di kelas XI RPL 1
         </p>
       </div>
 
-      <!-- Captain Highlight -->
-      <div v-if="leader" class="mb-16">
+      <!-- Guru Highlight -->
+      <div v-if="guru" class="mb-16">
         <div
           class="glass max-w-4xl mx-auto overflow-hidden border-neon-blue/30 shadow-[0_0_50px_rgba(0,243,255,0.1)]"
         >
@@ -27,37 +27,32 @@ const members = students.filter((s) => s.type !== "leader");
             >
               <div class="relative">
                 <img
-                  :src="leader.avatar"
-                  :alt="leader.name"
+                  :src="guru.avatar"
+                  :alt="guru.name"
                   class="w-48 h-48 rounded-full border-4 border-neon-blue shadow-[0_0_30px_rgba(0,243,255,0.3)] bg-void-black"
                 />
-                <div
-                  class="absolute -bottom-2 -right-2 bg-neon-blue p-2 rounded-lg shadow-xl"
-                >
-                  <ShieldCheck class="w-6 h-6 text-void-black" />
-                </div>
               </div>
             </div>
             <div class="md:w-2/3 p-8 md:p-12">
               <span
                 class="text-neon-blue text-sm font-bold tracking-[0.2em] uppercase mb-2 block"
-                >Komandan Misi</span
+                >Guru Tercinta Kami</span
               >
-              <h3 class="text-4xl mb-4">{{ leader.name }}</h3>
+              <h3 class="text-4xl mb-4">{{ guru.name }}</h3>
               <p class="text-xs text-starlight/40 mb-6 font-poppins">
-                {{ leader.idNumber }}
+                {{ guru.idNumber }}
               </p>
               <blockquote
                 class="text-xl italic text-starlight/80 mb-8 border-l-4 border-neon-blue pl-6"
               >
-                "{{ leader.quote }}"
+                "{{ guru.quote }}"
               </blockquote>
               <a
-                :href="'mailto:' + leader.contact"
+                :href="'mailto:' + guru.contact"
                 class="inline-flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all font-bold"
               >
                 <Mail class="w-5 h-5" />
-                Contact Captain
+                Contact Guru
               </a>
             </div>
           </div>

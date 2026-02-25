@@ -1,53 +1,265 @@
 export const students = [
   {
     id: 1,
-    name: "Alex 'Star-Lord' Johnson",
-    role: "Ketua Kelas / Kapten",
-    idNumber: "2024-CMD-01",
-    quote: "Menuju bintang dan melampauinya! Setiap misi dimulai dengan satu langkah kecil.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
+    name: "Pratiwi, S.S.I., Gr.",
+    role: "Guru / Wali Kelas",
+    idNumber: "2026-TCH-01",
+    quote: "Fisika adalah bahasa alam semesta.",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Pratiwi",
     type: "leader",
-    contact: "alex@galactic.edu"
+    contact: "pratiwi@school.edu"
   },
   {
     id: 2,
-    name: "Elena 'Comet' Smith",
-    role: "Insinyur Utama",
-    idNumber: "2024-ENG-05",
-    quote: "Fisika adalah bahasa alam semesta.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Elena"
+    name: "ADELYA FAUZI ALFIAN",
+    role: "Bendahara",
+    idNumber: "102419349",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Adelya"
   },
   {
     id: 3,
-    name: "Marcus 'Orbit' Lee",
-    role: "Navigator",
-    idNumber: "2024-NAV-03",
-    quote: "Menemukan jalan kita melalui kabut ujian.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus"
+    name: "ADLY SYAKIEB HAFIDZ GUSTIRA",
+    role: "Siswa",
+    idNumber: "102419350",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Adly"
   },
   {
     id: 4,
-    name: "Sofia 'Nova' Garcia",
-    role: "Petugas Sains",
-    idNumber: "2024-SCI-09",
-    quote: "Eksplorasi ada dalam DNA kita.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sofia"
+    name: "ALFIZAR SAFIY HAMIZAN",
+    role: "Siswa",
+    idNumber: "102419351",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alfizar"
   },
   {
     id: 5,
-    name: "Daniel 'Pulsar' Brown",
-    role: "Komunikasi",
-    idNumber: "2024-COM-12",
-    quote: "Mendengarkan bisikan kebijaksanaan kosmik.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Daniel"
+    name: "ALIF YUSUF ANWAR",
+    role: "Siswa",
+    idNumber: "102419352",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alif"
   },
   {
     id: 6,
-    name: "Yuki 'Zenith' Tanaka",
-    role: "Ahli Strategi",
-    idNumber: "2024-STR-07",
-    quote: "Presisi dalam setiap perhitungan, semangat dalam setiap hati.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Yuki"
+    name: "ALYA ALMIRA PUTRI",
+    role: "Siswa",
+    idNumber: "102419353",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alya"
+  },
+  {
+    id: 7,
+    name: "ANNISA AGHNIYA FAZA",
+    role: "Siswa",
+    idNumber: "102419354",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Annisa"
+  },
+  {
+    id: 8,
+    name: "ARBIANSYAH AKBAR",
+    role: "Siswa",
+    idNumber: "102419355",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Arbiansyah"
+  },
+  {
+    id: 9,
+    name: "AYYAS HUSAYN",
+    role: "Siswa",
+    idNumber: "102419356",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ayyas"
+  },
+  {
+    id: 10,
+    name: "BINTANG PUTRA RASYA DIKA",
+    role: "Siswa",
+    idNumber: "102419357",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Bintang"
+  },
+  {
+    id: 11,
+    name: "DAFFA DERYAN RASHIF",
+    role: "Siswa",
+    idNumber: "102419358",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Daffa"
+  },
+  {
+    id: 12,
+    name: "DANIS FERDIANSYAH",
+    role: "Siswa",
+    idNumber: "102419359",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Danis"
+  },
+  {
+    id: 13,
+    name: "DEAN SULTAN SADYA",
+    role: "Siswa",
+    idNumber: "102419360",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Dean"
+  },
+  {
+    id: 14,
+    name: "DZIKRY FARERA LENGGANA",
+    role: "Siswa",
+    idNumber: "102419361",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Dzikry"
+  },
+  {
+    id: 15,
+    name: "FARREL MUTTAQIN",
+    role: "Siswa",
+    idNumber: "102419362",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Farrel"
+  },
+  {
+    id: 16,
+    name: "FREGA TEGUH DWIGUNA",
+    role: "Siswa",
+    idNumber: "102419363",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Frega"
+  },
+  {
+    id: 17,
+    name: "HANIF YANWAR WAHIDAN",
+    role: "Siswa",
+    idNumber: "102419364",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Hanif"
+  },
+  {
+    id: 18,
+    name: "IMEITA NATASHA",
+    role: "Siswa",
+    idNumber: "102419365",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Imeita"
+  },
+  {
+    id: 19,
+    name: "IRHAM HADI AHSANU",
+    role: "Siswa",
+    idNumber: "102419366",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Irham"
+  },
+  {
+    id: 20,
+    name: "KAISA VIDYA AMATULLAH",
+    role: "Siswa",
+    idNumber: "102419367",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Kaisa"
+  },
+  {
+    id: 21,
+    name: "KAKA ANDREA YAHYA",
+    role: "Siswa",
+    idNumber: "102419368",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Kaka"
+  },
+  {
+    id: 22,
+    name: "MARVA AULIA AHMAD",
+    role: "Siswa",
+    idNumber: "102419369",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marva"
+  },
+  {
+    id: 23,
+    name: "MUHAMMAD RAFFA HARVANI",
+    role: "Siswa",
+    idNumber: "102419370",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Muhammad"
+  },
+  {
+    id: 24,
+    name: "MUHAMMAD WILDAN TAUFIK",
+    role: "Siswa",
+    idNumber: "102419371",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Muhammad"
+  },
+  {
+    id: 25,
+    name: "NABIL AKBAR FADHILLAH",
+    role: "Ketua Kelas",
+    idNumber: "102419372",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Nabil"
+  },
+  {
+    id: 26,
+    name: "NAILAH FAKHIRAH HANAF",
+    role: "Siswa",
+    idNumber: "102419373",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Nailah"
+  },
+  {
+    id: 27,
+    name: "NAUFAL RAUSYAN FIKRI",
+    role: "Siswa",
+    idNumber: "102419374",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Naufal"
+  },
+  {
+    id: 28,
+    name: "NESYA MEGA PUTRI",
+    role: "Siswa",
+    idNumber: "102419375",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Nesya"
+  },
+  {
+    id: 29,
+    name: "PUTRI JASMINE AZZAHRA RAMA",
+    role: "Siswa",
+    idNumber: "102419376",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Putri"
+  },
+  {
+    id: 30,
+    name: "RAFADITYA SYAHPUTRA",
+    role: "Bendahara",
+    idNumber: "102419377",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rafaditya"
+  },
+  {
+    id: 31,
+    name: "RAIKHANIA RIZKY PUTRI HERDIA",
+    role: "Sekretaris",
+    idNumber: "102419378",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Raikhania"
+  },
+  {
+    id: 32,
+    name: "REFKY FAVIAN MAHARDIKA",
+    role: "Siswa",
+    idNumber: "102419379",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Refky"
+  },
+  {
+    id: 33,
+    name: "RIZKY FAUZI RAHMAN",
+    role: "Siswa",
+    idNumber: "102419380",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rizky"
+  },
+  {
+    id: 34,
+    name: "SASHYKIRANA ANANDITA SAHRO",
+    role: "Sekretaris",
+    idNumber: "102419381",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sashykirana"
+  },
+  {
+    id: 35,
+    name: "SITUMORANG, GABRIELDO",
+    role: "Siswa",
+    idNumber: "102419382",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Situmorang,"
+  },
+  {
+    id: 36,
+    name: "TIFAYATUL HUSNA AZAHRA",
+    role: "Siswa",
+    idNumber: "102419383",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Tifayatul"
+  },
+  {
+    id: 37,
+    name: "YUGA PUTRA NUGRAHA",
+    role: "Siswa",
+    idNumber: "102419384",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Yuga"
   }
 ];
 
@@ -87,7 +299,58 @@ export const milestones = [
 ];
 
 export const testimonials = [
-  { id: 1, name: "Budi", content: "Kelas paling keren yang pernah ada! Berasa jadi astronot setiap hari.", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Budi" },
-  { id: 2, name: "Ani", content: "Lingkungannya suportif banget, gurunya juga asik kayak kapten kapal.", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ani" },
-  { id: 3, name: "Siti", content: "Banyak hal baru yang dipelajari, dari sains sampai kerjasama tim.", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Siti" }
+  { id: 1, name: "Bu Nur", content: "Kelas paling keren yang pernah ada! Berasa jadi astronot setiap hari.", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=BuNur" },
+  { id: 2, name: "Pak Taufik", content: "Lingkungannya suportif banget, gurunya juga asik kayak kapten kapal.", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=PakTaufik" },
+  { id: 3, name: "Bu Hajar", content: "Banyak hal baru yang dipelajari, dari sains sampai kerjasama tim.", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=BuHajar" }
+];
+
+export const favoriteSongs = [
+  {
+    id: 1,
+    studentName: "Alex 'Star-Lord'",
+    songTitle: "Starman",
+    artist: "David Bowie",
+    spotifyUrl: "https://open.spotify.com/track/0p9X7X9P7p9X7X9P7p9X7X",
+    coverImage: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: 2,
+    studentName: "Elena 'Comet'",
+    songTitle: "Blinding Lights",
+    artist: "The Weeknd",
+    spotifyUrl: "https://open.spotify.com/track/0VjIj9p2C36vzFiLvKz9Z2",
+    coverImage: "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: 3,
+    studentName: "Marcus 'Orbit'",
+    songTitle: "Interstellar Overdrive",
+    artist: "Pink Floyd",
+    spotifyUrl: "https://open.spotify.com/track/309rd6I6A7f999E10vY9X7",
+    coverImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: 4,
+    studentName: "Sofia 'Nova'",
+    songTitle: "Supernova",
+    artist: "Aespa",
+    spotifyUrl: "https://open.spotify.com/track/1pMh9T9p7X9P7X9P7X9P7X",
+    coverImage: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: 5,
+    studentName: "Daniel 'Pulsar'",
+    songTitle: "Midnight City",
+    artist: "M83",
+    spotifyUrl: "https://open.spotify.com/track/1psBae9O3U7X9P7X9P7X9X",
+    coverImage: "https://images.unsplash.com/photo-1514525253344-78ec4f5ca685?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: 6,
+    studentName: "Yuki 'Zenith'",
+    songTitle: "Stay",
+    artist: "The Kid LAROI & Justin Bieber",
+    spotifyUrl: "https://open.spotify.com/track/5HCyWUrJSv7S6Ls9AUBicr",
+    coverImage: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=400"
+  }
 ];
