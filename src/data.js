@@ -4,7 +4,7 @@ export const students = [
     name: "Pratiwi, S.S.I., Gr.",
     role: "Guru / Wali Kelas",
     idNumber: "2026-TCH-01",
-    quote: "Fisika adalah bahasa alam semesta.",
+    quote: "AWS No 1.",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Pratiwi",
     type: "leader",
     contact: "pratiwi@school.edu"
