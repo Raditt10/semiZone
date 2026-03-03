@@ -20,22 +20,22 @@ const router = useRouter();
       </router-view>
 
       <!-- CTA -->
-      <section class="py-24 px-6">
+      <section class="py-16 md:py-24 px-4 md:px-6">
         <div class="max-w-4xl mx-auto text-center">
-          <div class="glass p-12 rounded-3xl relative overflow-hidden group">
+          <div class="glass px-6 py-10 md:p-12 rounded-3xl relative overflow-hidden group">
             <div
               class="absolute top-0 right-0 w-64 h-64 bg-neon-blue/10 blur-3xl -translate-x-1/2 -translate-y-1/2"
             ></div>
-            <h2 class="text-4xl font-bold text-white mb-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
               Bergabunglah dengan Petualangan Kami!
             </h2>
-            <p class="text-starlight/60 mb-10 text-lg">
+            <p class="text-starlight/60 mb-8 md:mb-10 text-base md:text-lg">
               Jadilah bagian dari perjalanan luar biasa di kelas XI RPL 1. Bersama
               kita akan menjelajahi dunia pengetahuan, kreativitas, dan
               persahabatan yang tak terbatas.
             </p>
             <button
-              class="bg-neon-blue text-void-black px-10 py-4 rounded-xl font-bold hover:shadow-[0_0_30px_rgba(0,243,255,0.5)] transition-all"
+              class="bg-neon-blue text-void-black px-8 py-3 md:px-10 md:py-4 rounded-xl font-bold hover:shadow-[0_0_30px_rgba(0,243,255,0.5)] transition-all inline-flex items-center justify-center mx-auto text-center"
               @click="router.push('/gallery')"
             >
               Lihat Perjalanan Kami

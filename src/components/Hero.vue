@@ -35,7 +35,7 @@ import { ChevronRight } from "lucide-vue-next";
         >
           <h1 class="text-4xl md:text-5xl mb-4 leading-tight">
             Semizone <br />
-            <span class="text-neon-blue glow-blue">XI RPL 1</span>
+            <span class="text-neon-blue glow-blue whitespace-nowrap">XI&nbsp;RPL&nbsp;1</span>
           </h1>
 
           <p

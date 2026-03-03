@@ -17,8 +17,8 @@ const spotifyLogo = "https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spo
           <h2 class="text-xs font-bold tracking-[0.5em] text-neon-blue uppercase mb-4 animate-fade-in">
             Playlist Siswa XI RPL 1
           </h2>
-          <h1 class="text-5xl md:text-6xl font-poppins font-bold text-white leading-tight">
-            Lagu Fav Warga <span class="bg-clip-text text-transparent bg-linear-to-r from-neon-blue to-white">XI RPL 1</span>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-poppins font-bold text-white leading-tight">
+            Lagu Fav Warga <span class="whitespace-nowrap bg-clip-text text-transparent bg-linear-to-r from-neon-blue to-white">XI&nbsp;RPL&nbsp;1</span>
           </h1>
         </div>
         <p class="text-starlight/60 max-w-md text-lg italic border-l-2 border-neon-blue/30 pl-6">
