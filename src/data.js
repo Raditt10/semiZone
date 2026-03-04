@@ -312,5 +312,13 @@ export const favoriteSongs = [
     artist: "The Neighbourhood",
     spotifyUrl: "https://open.spotify.com/track/40gvh6jP5qxMJuMmF9lG9A",
     coverImage: "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025260c62db020e5861a51556d"
+  },
+  {
+    id: 2,
+    studentName: "Arbiansyah Akbar",
+    songTitle: "Aku Harus Jujur",
+    artist: "Kerispatih",
+    spotifyUrl: "https://open.spotify.com/track/5NmrJDP3qgv52028oIDRor",
+    coverImage: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02428ad09a59374d557599382d"
   }
 ];
