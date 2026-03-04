@@ -5,7 +5,7 @@ export const students = [
     role: "Guru / Wali Kelas",
     idNumber: "2026-TCH-01",
     quote: "AWS No 1.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Pratiwi",
+    avatar: "/guru.jpeg",
     type: "leader",
     contact: "pratiwi@school.edu"
   },

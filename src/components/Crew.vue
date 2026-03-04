@@ -29,7 +29,7 @@ const members = students.filter((s) => s.type !== "leader");
                 <img
                   :src="guru.avatar"
                   :alt="guru.name"
-                  class="w-48 h-48 rounded-full border-4 border-neon-blue shadow-[0_0_30px_rgba(0,243,255,0.3)] bg-void-black"
+                  class="w-48 h-48 object-cover object-top rounded-full border-4 border-neon-blue shadow-[0_0_30px_rgba(0,243,255,0.3)] bg-void-black"
                 />
               </div>
             </div>
