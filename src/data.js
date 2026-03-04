@@ -328,5 +328,37 @@ export const favoriteSongs = [
     artist: "Addison Rae",
     spotifyUrl: "https://open.spotify.com/track/6ouhsRJ7gExB7LCYjITk4Y",
     coverImage: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02089511953028cbfeb095c593"
+  },
+  {
+    id: 4,
+    studentName: "Kaisa Vidya Amatullah",
+    songTitle: "NASA",
+    artist: "ATEEZ",
+    spotifyUrl: "https://open.spotify.com/search/ATEEZ%20NASA",
+    coverImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: 5,
+    studentName: "Annisa Aghniya Faza",
+    songTitle: "Toxic till the end",
+    artist: "Rosé",
+    spotifyUrl: "https://open.spotify.com/search/Ros%C3%A9%20Toxic%20till%20the%20end",
+    coverImage: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/14/66/2d14661b-345b-d0f3-4e86-56ef626e68aa/075679629203.jpg/600x600bb.jpg"
+  },
+  {
+    id: 6,
+    studentName: "Marva Aulia Ahmad",
+    songTitle: "Somebody's Pleasure",
+    artist: "Aziz Hedra",
+    spotifyUrl: "https://open.spotify.com/search/Somebody's%20Pleasure%20Aziz%20Hedra",
+    coverImage: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c0/20/79/c0207995-774b-7693-ae8d-ac0473c0f361/196871108324.jpg/600x600bb.jpg"
+  },
+  {
+    id: 7,
+    studentName: "Dean Sultan Sadya",
+    songTitle: "Dimensions",
+    artist: "Owen Pallett",
+    spotifyUrl: "https://open.spotify.com/search/Dimensions%20Owen%20Pallett",
+    coverImage: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/64/a3/db/64a3db4d-942b-40dd-c97b-4b104885d6e0/886448820741.jpg/600x600bb.jpg"
   }
 ];

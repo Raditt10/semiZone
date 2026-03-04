@@ -2,12 +2,20 @@
 import { ref } from "vue";
 import { favoriteSongs } from "../data";
 import { Music, Play, ExternalLink, X } from "lucide-vue-next";
+import CustomAlert from "../components/CustomAlert.vue";
 
 const spotifyLogo = "https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png";
 
 const activeSong = ref(null);
+const showAlert = ref(false);
+const alertSongUrl = ref("");
 
 const playSong = (song) => {
+  if (song.spotifyUrl.includes('/search/')) {
+     alertSongUrl.value = song.spotifyUrl;
+     showAlert.value = true;
+     return;
+  }
   activeSong.value = song;
 };
 
@@ -15,10 +23,31 @@ const closePlayer = () => {
   activeSong.value = null;
 };
 
+const closeAlert = () => {
+  showAlert.value = false;
+  setTimeout(() => alertSongUrl.value = "", 300); // clear after animation
+};
+
 const getEmbedUrl = (url) => {
   if (!url) return '';
-  // Convert open.spotify.com/track/... to open.spotify.com/embed/track/...
-  return url.replace('/track/', '/embed/track/') + '?utm_source=generator&theme=0';
+  
+  // Jika URL berupa hasil query pencarian, fallback menggunakan search widget atau hindari error embed
+  if (url.includes('/search/')) {
+    // Note: Spotify tidak punya embed widget resmi langsung dari URL /search/ 
+    // tapi kita coba konversi sedekat mungkin ke blank track untuk hindari iframe failed to connect
+    return '';
+  }
+
+  // Convert open.spotify.com/[type]/... to open.spotify.com/embed/[type]/...
+  if (url.includes('/track/')) {
+    return url.replace('/track/', '/embed/track/') + '?utm_source=generator&theme=0';
+  } else if (url.includes('/album/')) {
+    return url.replace('/album/', '/embed/album/') + '?utm_source=generator&theme=0';
+  } else if (url.includes('/playlist/')) {
+    return url.replace('/playlist/', '/embed/playlist/') + '?utm_source=generator&theme=0';
+  }
+  
+  return url;
 };
 </script>
 
@@ -116,7 +145,7 @@ const getEmbedUrl = (url) => {
     <!-- Spotify Embed Modal -->
     <div 
       v-if="activeSong"
-      class="fixed inset-0 z-100 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-fade-in"
+      class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-fade-in"
       @click.self="closePlayer"
       style="animation-duration: 0.3s;"
     >
@@ -142,6 +171,15 @@ const getEmbedUrl = (url) => {
         </iframe>
       </div>
     </div>
+    
+    <!-- Custom Alert pop-up -->
+    <CustomAlert 
+      :show="showAlert"
+      title="Track ID Tidak Ditemukan"
+      message="Lagu ini belum memiliki Spotify Track ID spesifik yang bisa diputar langsung di dalam mini-player ini. Anda tetap bisa mendengarkannya dengan menekan tombol Buka di Spotify di bawah."
+      :spotify-url="alertSongUrl"
+      @close="closeAlert"
+    />
   </div>
 </template>
 
