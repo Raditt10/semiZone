@@ -320,5 +320,13 @@ export const favoriteSongs = [
     artist: "Kerispatih",
     spotifyUrl: "https://open.spotify.com/track/5NmrJDP3qgv52028oIDRor",
     coverImage: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02428ad09a59374d557599382d"
+  },
+  {
+    id: 3,
+    studentName: "Adelya Fauzi Alfian",
+    songTitle: "Diet Pepsi",
+    artist: "Addison Rae",
+    spotifyUrl: "https://open.spotify.com/track/6ouhsRJ7gExB7LCYjITk4Y",
+    coverImage: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02089511953028cbfeb095c593"
   }
 ];
