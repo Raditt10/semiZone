@@ -8,7 +8,7 @@ const members = students.filter((s) => s.type !== "leader");
 
 <template>
   <section id="crew" class="py-24 px-6 bg-void-black relative">
-    <div class="max-w-7xl mx-auto">
+    <div class="max-w-7xl mx-auto"> 
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-5xl mb-4">Kenali Para Murid XI RPL 1</h2>
         <p class="text-starlight/60">

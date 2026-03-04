@@ -307,50 +307,10 @@ export const testimonials = [
 export const favoriteSongs = [
   {
     id: 1,
-    studentName: "Alex 'Star-Lord'",
-    songTitle: "Starman",
-    artist: "David Bowie",
-    spotifyUrl: "https://open.spotify.com/track/0p9X7X9P7p9X7X9P7p9X7X",
-    coverImage: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=400"
-  },
-  {
-    id: 2,
-    studentName: "Elena 'Comet'",
-    songTitle: "Blinding Lights",
-    artist: "The Weeknd",
-    spotifyUrl: "https://open.spotify.com/track/0VjIj9p2C36vzFiLvKz9Z2",
-    coverImage: "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=400"
-  },
-  {
-    id: 3,
-    studentName: "Marcus 'Orbit'",
-    songTitle: "Interstellar Overdrive",
-    artist: "Pink Floyd",
-    spotifyUrl: "https://open.spotify.com/track/309rd6I6A7f999E10vY9X7",
-    coverImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400"
-  },
-  {
-    id: 4,
-    studentName: "Sofia 'Nova'",
-    songTitle: "Supernova",
-    artist: "Aespa",
-    spotifyUrl: "https://open.spotify.com/track/1pMh9T9p7X9P7X9P7X9P7X",
-    coverImage: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=400"
-  },
-  {
-    id: 5,
-    studentName: "Daniel 'Pulsar'",
-    songTitle: "Midnight City",
-    artist: "M83",
-    spotifyUrl: "https://open.spotify.com/track/1psBae9O3U7X9P7X9P7X9X",
-    coverImage: "https://images.unsplash.com/photo-1514525253344-78ec4f5ca685?auto=format&fit=crop&q=80&w=400"
-  },
-  {
-    id: 6,
-    studentName: "Yuki 'Zenith'",
-    songTitle: "Stay",
-    artist: "The Kid LAROI & Justin Bieber",
-    spotifyUrl: "https://open.spotify.com/track/5HCyWUrJSv7S6Ls9AUBicr",
-    coverImage: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=400"
+    studentName: "Raikhania Rizky",
+    songTitle: "Baby Came Home 2 / Valentines",
+    artist: "The Neighbourhood",
+    spotifyUrl: "https://open.spotify.com/track/40gvh6jP5qxMJuMmF9lG9A",
+    coverImage: "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025260c62db020e5861a51556d"
   }
 ];

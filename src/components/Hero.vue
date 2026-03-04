@@ -28,10 +28,10 @@ import { ChevronRight } from "lucide-vue-next";
     <!-- Hero Content -->
     <div class="relative z-10 w-full max-w-2xl px-6">
       <div
-        class="glass p-1 md:p-2 rounded-4xl shadow-[0_0_50px_rgba(0,0,0,0.5)] border-white/5"
+        class="p-1 md:p-2 rounded-4xl shadow-[0_8px_32px_rgba(2,6,23,0.6)] border border-white/10 bg-void-black/40 backdrop-blur-md"
       >
         <div
-          class="bg-black/40 backdrop-blur-2xl rounded-[1.8rem] p-6 md:p-10 border border-white/10 flex flex-col items-center text-center"
+          class="bg-deep-blue/40 backdrop-blur-2xl rounded-[1.8rem] p-6 md:p-10 border border-white/5 shadow-[inset_0_1px_2px_rgba(255,255,255,0.1)] flex flex-col items-center text-center"
         >
           <h1 class="text-4xl md:text-5xl mb-4 leading-tight">
             Semizone <br />
@@ -58,7 +58,7 @@ import { ChevronRight } from "lucide-vue-next";
             </a>
             <router-link
               to="/crew"
-              class="px-8 py-4 glass text-starlight font-bold rounded-xl hover:bg-white/20 transition-all border-white/10"
+              class="px-8 py-4 bg-white/5 backdrop-blur-md text-starlight font-bold rounded-xl hover:bg-white/10 transition-all border border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]"
             >
               Lihat Para Murid
             </router-link>

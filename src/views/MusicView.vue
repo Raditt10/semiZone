@@ -1,8 +1,25 @@
 <script setup>
+import { ref } from "vue";
 import { favoriteSongs } from "../data";
-import { Music, Play, ExternalLink } from "lucide-vue-next";
+import { Music, Play, ExternalLink, X } from "lucide-vue-next";
 
 const spotifyLogo = "https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png";
+
+const activeSong = ref(null);
+
+const playSong = (song) => {
+  activeSong.value = song;
+};
+
+const closePlayer = () => {
+  activeSong.value = null;
+};
+
+const getEmbedUrl = (url) => {
+  if (!url) return '';
+  // Convert open.spotify.com/track/... to open.spotify.com/embed/track/...
+  return url.replace('/track/', '/embed/track/') + '?utm_source=generator&theme=0';
+};
 </script>
 
 <template>
@@ -27,7 +44,7 @@ const spotifyLogo = "https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spo
       </div>
 
       <!-- Songs Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
+      <div v-if="favoriteSongs.length > 0" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
         <div 
           v-for="(song, index) in favoriteSongs" 
           :key="song.id"
@@ -41,13 +58,12 @@ const spotifyLogo = "https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spo
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div class="absolute inset-0 bg-void-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-              <a 
-                :href="song.spotifyUrl" 
-                target="_blank"
+              <button 
+                @click="playSong(song)"
                 class="w-12 h-12 bg-neon-blue rounded-full flex items-center justify-center text-void-black transform scale-50 group-hover:scale-100 transition-all duration-300 hover:scale-110 shadow-lg"
               >
                 <Play class="w-6 h-6 fill-current" />
-              </a>
+              </button>
             </div>
             
             <!-- Spotify Floating Badge -->
@@ -83,6 +99,47 @@ const spotifyLogo = "https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spo
             </a>
           </div>
         </div>
+      </div>
+
+      <!-- Empty State -->
+      <div v-else class="glass p-10 md:p-16 rounded-3xl text-center border-white/5 flex flex-col items-center justify-center min-h-[40vh] animate-fade-in shadow-[inset_0_1px_2px_rgba(255,255,255,0.05),0_8px_32px_rgba(2,6,23,0.4)] bg-deep-blue/20 mt-8">
+        <div class="w-16 h-16 md:w-20 md:h-20 bg-neon-blue/10 rounded-full flex items-center justify-center mb-6 border border-neon-blue/20">
+          <Music class="w-8 h-8 md:w-10 md:h-10 text-neon-blue opacity-80" />
+        </div>
+        <h3 class="text-xl md:text-2xl font-poppins font-bold text-white mb-3">Belum Ada Playlist</h3>
+        <p class="text-starlight/60 max-w-md mx-auto text-sm md:text-base">
+          Saat ini belum ada lagu favorit yang ditambahkan ke dalam playlist kelas.
+        </p>
+      </div>
+    </div>
+
+    <!-- Spotify Embed Modal -->
+    <div 
+      v-if="activeSong"
+      class="fixed inset-0 z-100 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-fade-in"
+      @click.self="closePlayer"
+      style="animation-duration: 0.3s;"
+    >
+      <div 
+        class="relative w-full max-w-md bg-void-black/95 border border-neon-blue/30 rounded-2xl p-4 shadow-[0_0_40px_rgba(0,243,255,0.15)] animate-slide-up"
+        style="animation-duration: 0.5s;"
+      >
+        <button 
+          @click="closePlayer"
+          class="absolute -top-12 right-0 md:-right-12 w-10 h-10 bg-void-black/80 hover:bg-neon-blue/20 border border-white/10 rounded-full flex items-center justify-center text-white transition-colors"
+        >
+          <X class="w-5 h-5" />
+        </button>
+        <iframe 
+          style="border-radius:12px" 
+          :src="getEmbedUrl(activeSong.spotifyUrl)" 
+          width="100%" 
+          height="352" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
       </div>
     </div>
   </div>
