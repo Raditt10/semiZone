@@ -19,7 +19,7 @@ const members = students.filter((s) => s.type !== "leader");
       <!-- Guru Highlight -->
       <div v-if="guru" class="mb-16">
         <div
-          class="glass max-w-4xl mx-auto overflow-hidden border-neon-blue/30 shadow-[0_0_50px_rgba(0,243,255,0.1)]"
+          class="glass max-w-4xl mx-auto overflow-hidden border-neon-blue/30 shadow-none md:shadow-[0_0_50px_rgba(0,243,255,0.1)]"
         >
           <div class="flex flex-col md:flex-row">
             <div
@@ -78,7 +78,7 @@ const members = students.filter((s) => s.type !== "leader");
 
           <div class="mb-6 relative">
             <div
-              class="absolute inset-0 bg-neon-blue/20 rounded-full blur-xl group-hover:bg-neon-blue/40 transition-all"
+              class="hidden md:block absolute inset-0 bg-neon-blue/20 rounded-full blur-xl group-hover:bg-neon-blue/40 transition-all"
             ></div>
             <img
               :src="student.avatar"

@@ -27,10 +27,10 @@ defineEmits(['close']);
         class="relative w-full max-w-md glass-dark p-6 md:p-8 rounded-2xl shadow-[0_0_40px_rgba(0,243,255,0.15)] border border-neon-blue/30 overflow-hidden"
         @click.stop
       >
-        <!-- Background accents -->
-        <div class="absolute -top-20 -right-20 w-40 h-40 bg-neon-blue/20 blur-[50px] rounded-full"></div>
-        <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-glowing-purple/20 blur-[50px] rounded-full"></div>
-        
+        <div class="absolute inset-0 z-0 pointer-events-none">
+        <div class="hidden md:block absolute -top-20 -right-20 w-40 h-40 bg-neon-blue/20 blur-[50px] rounded-full"></div>
+        <div class="hidden md:block absolute -bottom-20 -left-20 w-40 h-40 bg-glowing-purple/20 blur-[50px] rounded-full"></div>
+      </div>  
         <div class="relative z-10">
           <!-- Close button -->
           <button 

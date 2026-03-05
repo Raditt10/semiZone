@@ -54,8 +54,8 @@ const getEmbedUrl = (url) => {
 <template>
   <div class="pt-32 pb-24 px-6 relative overflow-hidden">
     <!-- Background Accents -->
-    <div class="absolute top-0 right-0 w-96 h-96 bg-neon-blue/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-glowing-purple/10 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+    <div class="hidden md:block absolute top-0 right-0 w-96 h-96 bg-neon-blue/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+    <div class="hidden md:block absolute bottom-0 left-0 w-96 h-96 bg-glowing-purple/10 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
     <div class="max-w-7xl mx-auto relative z-10">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">

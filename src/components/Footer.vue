@@ -8,7 +8,7 @@ import { Instagram, Globe, Mail, MapPin } from "lucide-vue-next";
   >
     <!-- Glow Garnish -->
     <div
-      class="absolute bottom-0 right-0 w-64 h-64 bg-neon-blue/5 blur-[100px] rounded-full pointer-events-none"
+      class="hidden md:block absolute bottom-0 right-0 w-64 h-64 bg-neon-blue/5 blur-[100px] rounded-full pointer-events-none"
     ></div>
 
     <div

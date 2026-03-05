@@ -16,7 +16,7 @@ const filteredPosts = computed(() => {
   <section id="blog" class="py-24 px-6 relative overflow-hidden">
     <!-- bg -->
     <div
-      class="absolute -top-24 -left-24 w-96 h-96 bg-neon-blue/5 blur-[120px] rounded-full pointer-events-none"
+      class="hidden md:block absolute -top-24 -left-24 w-96 h-96 bg-neon-blue/5 blur-[120px] rounded-full pointer-events-none"
     ></div>
 
     <div class="max-w-7xl mx-auto relative z-10">
