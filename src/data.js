@@ -334,7 +334,7 @@ export const favoriteSongs = [
     studentName: "Kaisa Vidya Amatullah",
     songTitle: "NASA",
     artist: "ATEEZ",
-    spotifyUrl: "https://open.spotify.com/search/ATEEZ%20NASA",
+    spotifyUrl: "https://open.spotify.com/intl-id/track/4uTvPEr01pjTbZgl7jcKBD",
     coverImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400"
   },
   {
@@ -342,7 +342,7 @@ export const favoriteSongs = [
     studentName: "Annisa Aghniya Faza",
     songTitle: "Toxic till the end",
     artist: "Rosé",
-    spotifyUrl: "https://open.spotify.com/search/Ros%C3%A9%20Toxic%20till%20the%20end",
+    spotifyUrl: "https://open.spotify.com/intl-id/track/5rOkB3vRH1M8NbIN9NSnjz",
     coverImage: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/14/66/2d14661b-345b-d0f3-4e86-56ef626e68aa/075679629203.jpg/600x600bb.jpg"
   },
   {
@@ -350,7 +350,7 @@ export const favoriteSongs = [
     studentName: "Marva Aulia Ahmad",
     songTitle: "Somebody's Pleasure",
     artist: "Aziz Hedra",
-    spotifyUrl: "https://open.spotify.com/search/Somebody's%20Pleasure%20Aziz%20Hedra",
+    spotifyUrl: "https://open.spotify.com/intl-id/album/5S5vnFRSXVua5SbdoY9S8y",
     coverImage: "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c0/20/79/c0207995-774b-7693-ae8d-ac0473c0f361/196871108324.jpg/600x600bb.jpg"
   },
   {
@@ -358,7 +358,15 @@ export const favoriteSongs = [
     studentName: "Dean Sultan Sadya",
     songTitle: "Dimensions",
     artist: "Owen Pallett",
-    spotifyUrl: "https://open.spotify.com/search/Dimensions%20Owen%20Pallett",
-    coverImage: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/64/a3/db/64a3db4d-942b-40dd-c97b-4b104885d6e0/886448820741.jpg/600x600bb.jpg"
+    spotifyUrl: "https://open.spotify.com/intl-id/track/1F3pzdYyCJlnQoCM9gFzaU",
+    coverImage: "https://images.unsplash.com/photo-1614149162883-504ce4d13909?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    id: 8,
+    studentName: "Danis Ferdiansyah",
+    songTitle: "Too Much For Me",
+    artist: "SELKER",
+    spotifyUrl: "https://open.spotify.com/intl-id/track/2MymczAULhpJYbgyXwwiyw",
+    coverImage: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600"
   }
 ];
