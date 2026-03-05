@@ -50,10 +50,10 @@ const router = useRouter();
     <!-- Ambient background effects -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       <div
-        class="absolute top-[-10%] left-[-10%] w-125 h-125 bg-neon-blue/5 blur-[120px] rounded-full animate-pulse"
+        class="hidden md:block absolute top-[-10%] left-[-10%] w-125 h-125 bg-neon-blue/5 blur-[120px] rounded-full animate-pulse"
       ></div>
       <div
-        class="absolute bottom-[-10%] right-[-10%] w-125 h-125 bg-glowing-purple/5 blur-[120px] rounded-full animate-pulse delay-700"
+        class="hidden md:block absolute bottom-[-10%] right-[-10%] w-125 h-125 bg-glowing-purple/5 blur-[120px] rounded-full animate-pulse delay-700"
       ></div>
     </div>
   </div>

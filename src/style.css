@@ -28,7 +28,13 @@
         rgba(0, 243, 255, 0.15) 0%,
         transparent 50%
       );
-    background-attachment: fixed;
+  }
+
+  /* Add fixed attachment only for larger screens to avoid mobile paint lag */
+  @media (min-width: 768px) {
+    body {
+      background-attachment: fixed;
+    }
   }
 
   h1,
@@ -50,11 +56,11 @@
 
 @layer components {
   .glass {
-    @apply bg-deep-blue/30 backdrop-blur-xl border border-white/10 rounded-glass shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_8px_32px_rgba(2,6,23,0.4)];
+    @apply bg-deep-blue/40 backdrop-blur-sm md:bg-deep-blue/30 md:backdrop-blur-xl border border-white/10 rounded-glass shadow-none md:shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_8px_32px_rgba(2,6,23,0.4)];
   }
 
   .glass-dark {
-    @apply bg-void-black/50 backdrop-blur-2xl border border-white/5 rounded-glass shadow-[inset_0_1px_1px_rgba(255,255,255,0.05),0_8px_32px_rgba(2,6,23,0.6)];
+    @apply bg-void-black/70 backdrop-blur-md md:bg-void-black/50 md:backdrop-blur-2xl border border-white/5 rounded-glass shadow-none md:shadow-[inset_0_1px_1px_rgba(255,255,255,0.05),0_8px_32px_rgba(2,6,23,0.6)];
   }
 
   .neon-border {
@@ -92,12 +98,10 @@
 @keyframes pulse-glow {
   0%,
   100% {
-    opacity: 0.5;
-    filter: blur(10px);
+    opacity: 0.3;
   }
   50% {
-    opacity: 1;
-    filter: blur(15px);
+    opacity: 0.8;
   }
 }
 

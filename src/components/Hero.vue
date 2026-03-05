@@ -10,7 +10,7 @@ import { ChevronRight } from "lucide-vue-next";
     <!-- Background Wrapper -->
     <div class="absolute inset-0 z-0 overflow-hidden">
       <div
-        class="absolute inset-0 bg-[url('/hero-bg.png')] bg-cover bg-center scale-105 animate-[pulse_10s_infinite_alternate]"
+        class="absolute inset-0 bg-[url('/hero-bg.png')] bg-cover bg-center scale-105 md:animate-[pulse_10s_infinite_alternate]"
       ></div>
       <div
         class="absolute inset-0 bg-linear-to-b from-void-black/20 via-void-black/50 to-void-black"
@@ -19,10 +19,10 @@ import { ChevronRight } from "lucide-vue-next";
 
     <!-- Floating Planets/Elements for Parallax feel -->
     <div
-      class="absolute top-[15%] left-[10%] w-64 h-64 bg-glowing-purple/20 blur-[100px] animate-pulse"
+      class="hidden md:block absolute top-[15%] left-[10%] w-64 h-64 bg-glowing-purple/20 blur-[100px] animate-pulse"
     ></div>
     <div
-      class="absolute bottom-[20%] right-[10%] w-80 h-80 bg-neon-blue/20 blur-[100px] animate-pulse delay-1000"
+      class="hidden md:block absolute bottom-[20%] right-[10%] w-80 h-80 bg-neon-blue/20 blur-[100px] animate-pulse delay-1000"
     ></div>
 
     <!-- Hero Content -->
