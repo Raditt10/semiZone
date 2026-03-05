@@ -1,16 +1,11 @@
 <script setup>
-import { ref, onMounted, onUnmounted, watch } from "vue";
+import { ref, watch } from "vue";
 import { Rocket, X, Menu } from "lucide-vue-next";
 import { useRouter, useRoute } from "vue-router";
 
-const isScrolled = ref(false);
 const isMenuOpen = ref(false);
 const router = useRouter();
 const route = useRoute();
-
-const handleScroll = () => {
-  isScrolled.value = window.scrollY > 20;
-};
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
@@ -34,14 +29,6 @@ watch(
   },
 );
 
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-});
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
-
 const navLinks = [
   { name: "Beranda", to: "/" },
   { name: "Galeri", to: "/gallery" },
@@ -56,12 +43,8 @@ const navLinks = [
   <!-- Main Nav Bar -->
   <nav
     :class="[
-      'fixed top-0 left-0 right-0 z-[60] transition-all duration-300 px-6 py-2',
-      isScrolled && !isMenuOpen
-        ? 'glass-dark py-1.5 translate-y-1.5 mx-8 rounded-full shadow-2xl'
-        : isMenuOpen
-          ? 'bg-void-black/80 backdrop-blur-md'
-          : 'bg-transparent',
+      'fixed top-0 left-0 right-0 z-[60] transition-all duration-300 px-6 py-1.5 translate-y-1.5 mx-4 md:mx-8 rounded-full shadow-2xl glass-dark',
+      isMenuOpen ? 'bg-void-black/95 backdrop-blur-2xl' : ''
     ]"
   >
     <div class="max-w-7xl mx-auto flex items-center justify-between">
@@ -109,22 +92,22 @@ const navLinks = [
   <!-- Mobile Menu Overlay (Outside parent for better fixed positioning) -->
   <Transition
     enter-active-class="transition duration-400 ease-out"
-    enter-from-class="opacity-0 backdrop-blur-0"
-    enter-to-class="opacity-100 backdrop-blur-2xl"
+    enter-from-class="opacity-0"
+    enter-to-class="opacity-100"
     leave-active-class="transition duration-300 ease-in"
-    leave-from-class="opacity-100 backdrop-blur-2xl"
-    leave-to-class="opacity-0 backdrop-blur-0"
+    leave-from-class="opacity-100"
+    leave-to-class="opacity-0"
   >
     <div
       v-if="isMenuOpen"
-      class="fixed inset-0 z-50 md:hidden bg-void-black/95 flex flex-col items-center justify-center overflow-y-auto pt-20 pb-8"
+      class="fixed inset-0 z-50 md:hidden bg-void-black flex flex-col items-center justify-center overflow-y-auto pt-20 pb-8"
     >
-      <!-- Background Accents for Mobile Menu -->
+      <!-- Background Accents for Mobile Menu (Hidden on mobile to reduce lag) -->
       <div
-        class="absolute top-[20%] left-[10%] w-64 h-64 bg-neon-blue/10 blur-[100px] rounded-full pointer-events-none"
+        class="hidden md:block absolute top-[20%] left-[10%] w-64 h-64 bg-neon-blue/10 blur-[100px] rounded-full pointer-events-none"
       ></div>
       <div
-        class="absolute bottom-[20%] right-[10%] w-64 h-64 bg-glowing-purple/10 blur-[100px] rounded-full pointer-events-none"
+        class="hidden md:block absolute bottom-[20%] right-[10%] w-64 h-64 bg-glowing-purple/10 blur-[100px] rounded-full pointer-events-none"
       ></div>
 
       <div class="flex flex-col items-center gap-8 relative z-10 w-full px-8">
