@@ -1,4 +1,5 @@
 <script setup>
+// Import icons dari lucide-vue-next untuk social media dan kontak
 import { Instagram, Globe, Mail, MapPin } from "lucide-vue-next";
 </script>
 

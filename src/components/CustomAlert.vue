@@ -1,22 +1,25 @@
 <script setup>
+// Import icons untuk alert component
 import { AlertCircle, X, ExternalLink } from 'lucide-vue-next';
 
+// Props untuk konfigurasi alert
 defineProps({
-  show: Boolean,
+  show: Boolean, // Kontrol visibility alert
   title: {
     type: String,
-    default: 'Perhatian'
+    default: 'Perhatian' // Judul default alert
   },
   message: {
     type: String,
-    required: true
+    required: true // Pesan yang akan ditampilkan
   },
   spotifyUrl: {
     type: String,
-    default: ''
+    default: '' // Optional URL untuk link eksternal
   }
 });
 
+// Emit event untuk menutup alert
 defineEmits(['close']);
 </script>
 

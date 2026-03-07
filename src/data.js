@@ -1,3 +1,5 @@
+// Data daftar siswa dan guru Kelas XI RPL 1
+// Setiap siswa memiliki: id, nama, role, id number, avatar, dan kontak
 export const students = [
   {
     id: 1,

@@ -1,27 +1,31 @@
 <script setup>
+// Import Vue composables dan icons
 import { ref, watch } from "vue";
 import { Rocket, X, Menu } from "lucide-vue-next";
 import { useRouter, useRoute } from "vue-router";
 
+// State untuk menu mobile
 const isMenuOpen = ref(false);
 const router = useRouter();
 const route = useRoute();
 
+// Fungsi untuk toggle menu mobile
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
   if (isMenuOpen.value) {
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden"; // Disable scroll saat menu terbuka
   } else {
     document.body.style.overflow = "";
   }
 };
 
+// Fungsi untuk menutup menu
 const closeMenu = () => {
   isMenuOpen.value = false;
   document.body.style.overflow = "";
 };
 
-// Close menu on route change
+// Watcher untuk menutup menu saat route berubah
 watch(
   () => route.path,
   () => {
@@ -29,6 +33,7 @@ watch(
   },
 );
 
+// Daftar navigation links
 const navLinks = [
   { name: "Beranda", to: "/" },
   { name: "Galeri", to: "/gallery" },

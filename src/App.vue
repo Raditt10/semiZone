@@ -1,6 +1,8 @@
 <script setup>
+// Komponen navigasi dan footer
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
+// Akses router untuk navigasi
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
