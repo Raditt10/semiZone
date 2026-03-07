@@ -10,7 +10,7 @@ import { ChevronRight } from "lucide-vue-next";
     <!-- Background Wrapper -->
     <div class="absolute inset-0 z-0 overflow-hidden">
       <div
-        class="absolute inset-0 bg-[url('/hero-bg.png')] bg-cover bg-center scale-105 md:animate-[pulse_10s_infinite_alternate]"
+        class="absolute inset-0 bg-[url('/hero-bg-mobile.webp')] md:bg-[url('/hero-bg.webp')] bg-cover bg-center scale-105 md:animate-[pulse_10s_infinite_alternate]"
       ></div>
       <div
         class="absolute inset-0 bg-linear-to-b from-void-black/20 via-void-black/50 to-void-black"

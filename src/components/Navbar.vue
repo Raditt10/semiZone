@@ -54,7 +54,7 @@ const navLinks = [
         @click="closeMenu"
       >
         <img
-          src="/logo.png"
+          src="/logo.webp"
           alt="semizone"
           class="h-10 md:h-12 w-auto object-contain transition-all group-hover:scale-110 drop-shadow-blue"
         />
@@ -135,7 +135,7 @@ const navLinks = [
       >
         <div class="flex gap-6">
           <img
-            src="/logo.png"
+            src="/logo.webp"
             alt="semizone"
             class="h-24 w-auto object-contain drop-shadow-[0_0_40px_rgba(0,243,255,0.5)]"
           />
